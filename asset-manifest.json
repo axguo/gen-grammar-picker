@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gen-grammar-picker/static/css/main.90d275c1.css",
+    "main.js": "/gen-grammar-picker/static/js/main.a4e2795b.js",
+    "static/js/787.f5a983d7.chunk.js": "/gen-grammar-picker/static/js/787.f5a983d7.chunk.js",
+    "index.html": "/gen-grammar-picker/index.html",
+    "main.90d275c1.css.map": "/gen-grammar-picker/static/css/main.90d275c1.css.map",
+    "main.a4e2795b.js.map": "/gen-grammar-picker/static/js/main.a4e2795b.js.map",
+    "787.f5a983d7.chunk.js.map": "/gen-grammar-picker/static/js/787.f5a983d7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90d275c1.css",
+    "static/js/main.a4e2795b.js"
+  ]
+}
