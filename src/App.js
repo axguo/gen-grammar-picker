@@ -39,7 +39,26 @@ const App = () => {
       let phrase = rg.expand();
       newPhrases.push(phrase);
     }
+    newPhrases = fixArticles(newPhrases);
     setPhrases(newPhrases);
+  };
+
+  const fixArticles = (phrases) => {
+    const vowelSounds = ["a", "e", "i", "o", "u"];
+    const newPhrases = phrases.map((phrase) => {
+      const words = phrase.split(" ");
+      for (let i = 0; i < words.length - 1; i++) {
+        const currentWord = words[i];
+        const nextWord = words[i + 1];
+        if (currentWord === "a" && vowelSounds.includes(nextWord.charAt(0).toLowerCase())) {
+          words[i] = "an";
+        } else if (currentWord === "an" && !vowelSounds.includes(nextWord.charAt(0).toLowerCase())) {
+          words[i] = "a";
+        }
+      }
+      return words.join(" ");
+    });
+    return newPhrases;
   };
 
   const togglePhraseSelection = (phrase) => {
@@ -56,7 +75,7 @@ const App = () => {
 
   return (
     <div className={"app"}>
-      <button  onClick={generatePhrases}>
+      <button onClick={generatePhrases}>
         Generate Phrases
       </button>
       <ul>

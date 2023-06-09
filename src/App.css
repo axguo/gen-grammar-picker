@@ -1,6 +1,9 @@
 .app {
   padding: 2em;
   margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 button {
   margin: 1em 0;
